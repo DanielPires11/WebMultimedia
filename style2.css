@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+}
+​
+nav.menu ul {
+    text-align: left;
+    list-style-type: none;
+    margin-left: 150px;
+    padding: 0px;
+    padding-top: 35px;
+}
+​
+nav.menu li {
+    display: inline;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 15px;
+}
+​
+nav.menu li a {
+    text-decoration: none;
+    padding-top: 50px;
+    color: white;
+    font-family: Helvetica;
+}
+​
+nav.menu li a:hover {
+    color: #6178D4;
+}
+​
+#logo {  
+    font-size: 80px;
+    padding: 25px;
+}
+​
+body {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0%;
+    background-image: url('./Imagens/background.png');
+}
+​
+img {
+    width: 150%;
+}
+​
+.alinhado {
+    display: inline-flex;
+}
+​
+.esquerda {
+    padding-top: 10%;
+    padding-left: 20%;
+    color: white;
+    width: 35%;
+    font-size: 30px;
+    font-family: Helvetica;    
+}
+​
+#imgesq {
+    margin: 5%;
+    width: 28%;
+    filter: drop-shadow(0px 5px 3px black); 
+}
+​
+#direita {
+    padding: 5%;
+    color: white;
+    width: 35%;
+    font-size: 30px;
+    font-family: Helvetica;    
+}
+​
+.imgdir {
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 28%;   
+    filter: drop-shadow(0px 5px 3px black); 
+}
+​
+​
+​
+​
+.wrapper{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 850px;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+  
+.wrapper .title h1{
+    color:  #FFFFFF;
+    text-align: center;
+    margin-bottom: 25px;
+}
+  
+.contact-form{
+    display: flex;
+}
+  
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+  
+.input-fields, .msg{
+    width: 48%;
+}
+  
+.input-fields .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid  #6178D4;
+    padding: 10px;
+    color:  #6178D4;
+    width: 100%;
+}
+  
+.msg textarea{
+    height: 212px;
+}
+  
+.btn {
+    background: #6178D4;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color:  #FFFFFF;
+    cursor: pointer;
+    text-transform: uppercase;
+}

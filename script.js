@@ -1,35 +1,61 @@
-window.addEventListener('load',function(){
-    let input2=document.getElementsByTagName('input');
-    let elem2 = input2[1].outerHTML;
-})
+//alert("O JS está a funcionar");
 
-function updateTotal(){
+/*let BtnEle = document.querySelector(".Btn");
+   let resEle = document.querySelector(".result");
+   let boolVal = true;
+   resEle.innerHTML = boolVal;
+   BtnEle.addEventListener("click", () => {
+      boolVal = !boolVal;
+      resEle.innerHTML = boolVal;
+   });*/
+
+function myFunction() {
+
+
+    var i = Math.floor(Math.random() * 2);
     
-    let lines = document.querySelectorAll('table tr')
-    for (let i=1 ; i<lines.length; i++){
-        let input = lines[i].getElementsByTagName('input')[0]
-        console.log(lines[i].innerHTML)
+    if(i == 0) {
+        var x1 = document.createElement("IMG");
+        x1.setAttribute("src", "./Imagens/greybackground.jpg");
+        x1.setAttribute("id", "imgesq2");
+        x1.setAttribute("alt", "greybackground");
+        document.body.append(x1);
+
+        var x = document.createElement("ARTICLE");
+        x.setAttribute("id", "myArticle");
+        document.body.append(x);
+  
+        var heading = document.createElement("H2");
+        var txt1 = document.createTextNode("Teste Titulo");
+        heading.appendChild(txt1);
+        document.getElementById("myArticle").append(heading);
+  
+        var para = document.createElement("P");
+        var txt2 = document.createTextNode("Teste Texto");
+        para.appendChild(txt2);
+        document.getElementById("myArticle").append(para);
+
+    } else {
+        var x = document.createElement("ARTICLE");
+        x.setAttribute("id", "myArticle2");
+        document.body.appendChild(x);
+  
+        var heading = document.createElement("H2");
+        var txt1 = document.createTextNode("Teste Titulo");
+        heading.appendChild(txt1);
+        document.getElementById("myArticle2").appendChild(heading);
+  
+        var para = document.createElement("P");
+        var txt2 = document.createTextNode("Teste Texto");
+        para.appendChild(txt2);
+        document.getElementById("myArticle2").appendChild(para);
+
+        var x1 = document.createElement("IMG");
+        x1.setAttribute("src", "./Imagens/greybackground.jpg");
+        x1.setAttribute("id", "imgdir2");
+        x1.setAttribute("alt", "greybackground");
+        document.body.appendChild(x1);
+
     }
-    let span = document.getElementById('total')
-    span.innerHTML= total
+
 }
-window.addEventListener('submit', function(){
-    let line= document.createElement('tr')
-    let description = document.querySelector('form input[name=description]').value
-    let quantity =  document.querySelector('form input[name=quantity]').value
-    
-    line.innerHTML='<tr>'+
-                    '<td>'+ description + '</td>' +
-                    '<td><input value="' + quantity + '"></td>' +
-                    '<td><input type="button" value="Remove"></td>'+
-                    '</tr>'
-    let table = document.getElementById('products')
-    table.append(line)
-    
-    let remove = line.querySelector('input[type=button]')
-    remove.addEventListener('click', function(){
-        // remover o elemento dois niveis a cima: tr/td
-        this.parentNode.parentNode.remove()
-    })
-    event.preventDefault()
-})
