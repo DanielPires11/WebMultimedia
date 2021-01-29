@@ -1,13 +1,20 @@
 //alert("O JS está a funcionar");
 
-function myFunction() {
+/*var A = [];
+var B = 0;
+for(var i = 0; i < 50; i++) {
+    if(i%2 == 0) A[i] = 0;
+    else A[i] = 1;
+}*/
+
+function myFunction() {    
 
     var i = Math.floor(Math.random() * 2);
     
     if(i == 0) {                                                        //imagem esquerda, texto direita
-        var x = document.createElement("ARTICLE");                      //criação do article
+        var x = document.createElement("DIV");                      //criação do article
         x.setAttribute("id", "myArticle");                              //aplicação do css
-        document.body.append(x);                                        //implementado na pagina
+        document.body.appendChild(x);                                        //implementado na pagina
 
         var file = document.getElementById('imagem').files[0];          //vai buscar o elemento com o id imagem, que é introduzido através de um upload
         var reader  = new FileReader();
@@ -15,62 +22,46 @@ function myFunction() {
             var image = document.createElement("img");                  //cria o elemento img
             image.src = e.target.result;
             image.setAttribute("id", "imgesq3");                        //aplica o css do id imgesq3
+            //document.getElementById("myArticle2");
             document.body.appendChild(image);                           //mostra a imagem
             }
         reader.readAsDataURL(file);
 
-        /*var x1 = document.createElement("IMG");
-        //x1 = document.querySelector('label input[id=imagem]').value;
-        x1.setAttribute("src", "./Imagens/greybackground.jpg");
-        x1.setAttribute("id", "imgesq2");
-        x1.setAttribute("alt", "greybackground");
-        document.body.append(x1);*/
-
         var heading = document.createElement("H2");
         var txt1 = document.querySelector('label input[id=titulo]').value;
-        //var txt1 = document.createTextNode("Teste Titulo");
         heading.append(txt1);
-        document.getElementById("myArticle").append(heading);
+        document.getElementById("myArticle").appendChild(heading);
   
         var para = document.createElement("P");
         var txt2 = document.querySelector('label input[id=texto]').value;
         para.append(txt2);
-        document.getElementById("myArticle").append(para);
-
+        document.getElementById("myArticle").appendChild(para);                                      
 
     } else {                                                            //imagem esquerda, texto direita
-        var x = document.createElement("ARTICLE");                      //criação do article
-        x.setAttribute("id", "myArticle2");                             //aplicação do css
-        document.body.append(x);                                        //implementado na pagina
+        var y = document.createElement("DIV");                      //criação do article
+        y.setAttribute("id", "myArticle2");                             //aplicação do css
+        document.body.appendChild(y);                                        //implementado na pagina
   
-        var heading = document.createElement("H2");
-        var txt1 = document.querySelector('label input[id=titulo]').value;
-        //var txt1 = document.createTextNode("Teste Titulo");
-        heading.append(txt1);
-        document.getElementById("myArticle2").append(heading);
+        var heading1 = document.createElement("H2");
+        var txt3 = document.querySelector('label input[id=titulo]').value;
+        heading1.append(txt3);
+        document.getElementById("myArticle2").append(heading1);
   
-        var para = document.createElement("P");
-        var txt2 = document.querySelector('label input[id=texto]').value;
-        para.append(txt2);
-        document.getElementById("myArticle2").append(para);
+        var para1 = document.createElement("P");
+        var txt4 = document.querySelector('label input[id=texto]').value;
+        para1.append(txt4);
+        document.getElementById("myArticle2").append(para1);
 
-        var file = document.getElementById('imagem').files[0];
-        var reader  = new FileReader();
-        reader.onload = function(e)  {
+        var file1 = document.getElementById('imagem').files[0];
+        var reader2  = new FileReader();
+        reader2.onload = function(e)  {
             var image = document.createElement("img");
             image.src = e.target.result;
             image.setAttribute("id", "imgdir2");
+            //document.getElementById("myArticle");
             document.body.append(image);
             }
-        reader.readAsDataURL(file);
-
-        /*var x1 = document.createElement("IMG");
-        //x1 = document.querySelector('label input[id=imagem]').value;
-        x1.setAttribute("src", "./Imagens/greybackground.jpg");
-        x1.setAttribute("id", "imgdir2");
-        x1.setAttribute("alt", "greybackground");
-        document.body.append(x1);*/
-
+        reader2.readAsDataURL(file1);
 
     }
 
